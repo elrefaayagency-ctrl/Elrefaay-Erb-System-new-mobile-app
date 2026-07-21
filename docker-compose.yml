@@ -1,0 +1,31 @@
+# docker-compose.yml — تشغيل على VPS
+# ملحوظة: قاعدة البيانات (Supabase/PostgreSQL) مُستضافة خارجياً وليست جزء
+# من هذا الـ compose — الـ DATABASE_URL في .env بيوصّل عليها عن بعد.
+# لو حبيت تشغّل Postgres محلي على نفس السيرفر بدل Supabase مستقبلاً، أضف
+# service منفصل هنا (postgres:16-alpine) واستبدل DATABASE_URL بمساره الداخلي.
+
+services:
+  app:
+    build: .
+    container_name: najaf-erp-app
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      # ملفات المرفوعة (صور المنتجات، إثباتات الدفع) لازم تبقى خارج
+      # الكونتينر عشان تفضل موجودة بعد أي rebuild/redeploy
+      - ./src/uploads/products:/app/src/uploads/products
+      - ./src/uploads/payment_proofs:/app/src/uploads/payment_proofs
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:5000/api/health', r => process.exit(r.statusCode===200?0:1)).on('error', () => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
