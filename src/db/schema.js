@@ -813,7 +813,7 @@ async function createPhase4Schema() {
   await run(`
     CREATE TABLE IF NOT EXISTS settings (
       id INTEGER PRIMARY KEY CHECK (id = 1),
-      company_name TEXT NOT NULL DEFAULT 'مؤسسة الرقاعي للنجف والاضاءة',
+      company_name TEXT NOT NULL DEFAULT 'مؤسسة الرفاعي للنجف والاضاءة',
       company_name_en TEXT DEFAULT 'Al-Rifai Chandeliers & Lighting',
       slogan TEXT DEFAULT 'النجف الديكوري — كريستال — LED',
       address TEXT DEFAULT 'العنوان، المحافظة، مصر',
@@ -923,7 +923,7 @@ async function seedPhase4Data() {
   const settingsRow = await get(`SELECT id FROM settings WHERE id = 1`);
   if (!settingsRow) {
     await run(`INSERT INTO settings (id, company_name, company_name_en, slogan, address, phone)
-         VALUES (1, 'مؤسسة الرقاعي للنجف والاضاءة', 'Al-Rifai Chandeliers & Lighting',
+         VALUES (1, 'مؤسسة الرفاعي للنجف والاضاءة', 'Al-Rifai Chandeliers & Lighting',
                  'النجف الديكوري — كريستال — LED', 'العنوان، المحافظة، مصر', '01X-XXXX-XXXX')`);
   }
 

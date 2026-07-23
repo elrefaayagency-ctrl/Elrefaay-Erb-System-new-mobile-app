@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>مؤسـسـة الرقـاعـي للنجف والاضاءة</title>
+<title>مؤسـسـة الرفـاعـي للنجف والاضاءة</title>
 
 <!-- ═══ PWA — Manifest، الأيقونات، وألوان الهوية ═══ -->
 <link rel="manifest" href="/manifest.json"/>
@@ -16,7 +16,7 @@
      يدوياً عشان "إضافة للشاشة الرئيسية" تشتغل بشكل شبه-native هناك كمان -->
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="apple-mobile-web-app-title" content="الرقاعي ERP"/>
+<meta name="apple-mobile-web-app-title" content="الرفاعي ERP"/>
 <meta name="mobile-web-app-capable" content="yes"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -1911,7 +1911,7 @@ table.rdv-compact-table tbody td { padding: 11px var(--s-sm); font-size: 0.82rem
     </button>
 
     <div style="text-align:center; margin-top: var(--s-lg); font-size: 0.72rem; color: var(--cream-4);">
-      مؤسـسـة الرقـاعـي للنجف والاضاءة  &copy; 2026 · جميع الحقوق محفوظة
+      مؤسـسـة الرفـاعـي للنجف والاضاءة  &copy; 2026 · جميع الحقوق محفوظة
     </div>
   </div>
 </div>
@@ -8545,7 +8545,7 @@ async function returnRepairedToCustomer(id) {
 
 // ── إشعار/فاتورة المرتجع القابلة للطباعة — نفس الهوية البصرية لباقي مستندات النظام ──
 function buildReturnDocumentHTML(ret, items) {
-  const company = state.settings || { company_name: 'مؤسـسـة الرقـاعـي للنجف والاضاءة', company_name_en: 'Al-Rifai Chandeliers & Lighting' };
+  const company = state.settings || { company_name: 'مؤسـسـة الرفـاعـي للنجف والاضاءة', company_name_en: 'Al-Rifai Chandeliers & Lighting' };
   const rows = (items || []).map(it => `
     <tr>
       <td style="font-weight:600;padding:8px 12px;">${it.product_name || '—'}</td>
@@ -8845,7 +8845,7 @@ function buildInvoiceHTML({ invoice, items }, mode = 'a4') {
   const fontSize = isA4 ? '13px' : '11px';
   const logoUrl = '/favicon.svg';
   const company = state.settings || {
-    company_name: 'مؤسـسـة الرقـاعـي للنجف والاضاءة', company_name_en: 'Al-Rifai Chandeliers & Lighting',
+    company_name: 'مؤسـسـة الرفـاعـي للنجف والاضاءة', company_name_en: 'Al-Rifai Chandeliers & Lighting',
     address: '', phone: '', phone2: '',
   };
 
@@ -9169,7 +9169,7 @@ function buildInvoiceHTML({ invoice, items }, mode = 'a4') {
   <div style="font-size:10px;">📌 تاريخ استحقاق الأجل: ${new Date(invoice.due_date).toLocaleDateString('ar-EG')}</div>
   ` : ''}
   ${invoice.notes ? `<div class="divider"></div><div style="font-size:10px;">📝 ${invoice.notes}</div>` : ''}
-  <div class="footer"> بمؤسسة الرقـاعـي للنجف والاضاءة<br>شكراً لثقتكم</div>
+  <div class="footer"> بمؤسسة الرفـاعـي للنجف والاضاءة<br>شكراً لثقتكم</div>
   `}
 </div>
 <script>window.onload=()=>{window.print();}<\/script>
@@ -9182,7 +9182,7 @@ function buildInvoiceHTML({ invoice, items }, mode = 'a4') {
 //    (نفس الألوان والتخطيط)، لكن مُصمَّمة خصيصاً لأمر الشراء من المورد ───
 function buildSupplierInvoiceHTML(order, items) {
   const company = state.settings || {
-    company_name: 'مؤسـسـة الرقـاعـي للنجف والاضاءة', company_name_en: 'Al-Rifai Chandeliers & Lighting',
+    company_name: 'مؤسـسـة الرفـاعـي للنجف والاضاءة', company_name_en: 'Al-Rifai Chandeliers & Lighting',
     address: '', phone: '', phone2: '',
   };
 
@@ -9325,7 +9325,7 @@ async function printSupplierInvoiceA4(id) {
 
 // ─── إذن استلام بضاعة (Goods Receipt) — نفس الهوية البصرية أيضاً ───
 function buildGoodsReceiptHTML(receipt, items) {
-  const company = state.settings || { company_name: 'مؤسـسـة الرقـاعـي للنجف والاضاءة', company_name_en: 'Al-Rifai Chandeliers & Lighting', address: '', phone: '' };
+  const company = state.settings || { company_name: 'مؤسـسـة الرفـاعـي للنجف والاضاءة', company_name_en: 'Al-Rifai Chandeliers & Lighting', address: '', phone: '' };
   const rows = (items || []).map(it => `
     <tr>
       <td style="font-weight:600;padding:8px 12px;">${it.product_name || '—'}</td>
@@ -9435,7 +9435,7 @@ function buildWhatsAppMessage(invoice, items, installments) {
   ).join('\n');
 
   const wa_pay = { cash:'نقداً', credit:'آجل', installment:'تقسيط', mixed:'مختلط' };
-  const company = state.settings || { company_name: 'مؤسـسـة الرقـاعـي للنجف والاضاءة' };
+  const company = state.settings || { company_name: 'مؤسـسـة الرفـاعـي للنجف والاضاءة' };
 
   let msg = `🏮 *${company.company_name}*\n`;
   if (company.address) msg += `📍 ${company.address}\n`;
@@ -10247,7 +10247,7 @@ async function loadCollectionsReport() {
 
 function printCollectionsReport() {
   if (!_colLastReport || !_colLastReport.rows.length) return;
-  const company = state.settings || { company_name: 'مؤسـسـة الرقـاعـي للنجف والاضاءة' };
+  const company = state.settings || { company_name: 'مؤسـسـة الرفـاعـي للنجف والاضاءة' };
   const r = _colLastReport;
   const filterLabel = [r.governorate, r.area].filter(Boolean).join(' — ') || 'كل المحافظات والمناطق';
 
