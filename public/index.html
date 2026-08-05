@@ -2739,7 +2739,7 @@ table.rdv-compact-table tbody td { padding: 11px var(--s-sm); font-size: 0.82rem
     <div class="page" id="page-sales-returns">
       <div class="page-header">
         <div>
-          <div class="page-title">المردودات</div>
+          <div class="page-title">المرتجعات</div>
           <div class="page-subtitle">متابعة مردودات البيع والمرتجعات</div>
         </div>
         <div class="flex gap-sm">
@@ -4253,7 +4253,7 @@ const NAV_CONFIG = [
   { section: 'المبيعات', sectionVisibleFor: 'all', items: [
     { page: 'customers', label: 'العملاء', icon: `<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`, badge: null, visibleFor: 'all' },
     { page: 'invoices', label: 'الفواتير', icon: `<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`, badge: 'navInvoiceBadge', visibleFor: 'all' },
-    { page: 'sales-returns', label: 'المردودات', icon: `<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>`, badge: null, visibleFor: 'all' },
+    { page: 'sales-returns', label: 'المرتجعات', icon: `<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>`, badge: null, visibleFor: 'all' },
     { page: 'cust-installments', label: 'أقساط العملاء', icon: `<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>`, badge: 'navCustInstallBadge', visibleFor: 'all' },
     { page: 'collections', label: 'تحصيل الأقساط', icon: `<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`, badge: null, visibleFor: ["admin","manager"] },
   ]},
@@ -4663,7 +4663,7 @@ function navigate(page, entity = null) {
     'po-detail': ['تفاصيل أمر الشراء', ''],
     customers: ['العملاء', 'إدارة بيانات العملاء وكشوف حساباتهم'],
     invoices: ['الفواتير', 'إنشاء ومتابعة فواتير البيع'],
-    'sales-returns': ['المردودات', 'متابعة مردودات البيع والمرتجعات'],
+    'sales-returns': ['المرتجعات', 'متابعة مردودات البيع والمرتجعات'],
     'cust-installments': ['أقساط العملاء', 'متابعة أقساط فواتير البيع الآجل'],
     'collections': ['تحصيل الأقساط', 'قوائم تحصيل قابلة للطباعة مجمّعة بالمحافظة والمنطقة'],
     'invoice-detail': ['تفاصيل الفاتورة', ''],
